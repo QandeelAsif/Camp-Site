@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class=jumbotron>
+         <h1>Welcome to Beyond The Tent</h1>    
+         <p>Choose your tent from our hand picked campgrounds and go beyond your limits </p>
+        <p> <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add a new campsite?</a> </p> 
+    </header>
+
+    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+            <% camps.forEach(function(camp) { %>
+              <div class="col-md-3 col-sm-6">
+                  <div class="thumbnail">
+                       <img src="<%= camp.image %>" alt="">
+                       <div class="caption">
+                               <h4><%= camp.name %> </h4>
+                       </div>
+                       <p>
+                           <a href="/campgrounds/<%=camp.id %>"class="btn btn-primary btn-lg">More info</a>
+                       </p>
+                  </div>
+              </div>  
+           <% }) %>
+       </div>
+</div>
+
+<% include ../partials/footer %>

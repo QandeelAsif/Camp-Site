@@ -1,0 +1,20 @@
+<%include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <h2 style="text-align: center">Post in your review!!</h2>
+         <div style="width:40%; margin:25px auto;">
+
+            <!-- form to send back -->
+            <form  action="/campgrounds/<%=campground._id%>/comments" method="POST">
+                <div class="form-group">
+                     <input class="form-control" type="text" placeholder="review" name="comments[text]">
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary btn-lg btn-block" type="submit" name="" id="">
+                </div>
+            </form>
+            <a href="/campgrounds/show">Go back?</a>
+        </div>
+    </div>
+</div>
+<%include ../partials/footer %>
